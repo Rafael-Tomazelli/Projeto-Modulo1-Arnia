@@ -2,10 +2,11 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const medicalRecordId = urlParams.get("id");
 const userId = urlParams.get("userId");
+let patientId = ''
 console.log(5, userId, medicalRecordId)
 
 function pageBack() {
-  window.location.href = `C:/Users/DELL/Desktop/Programa%C3%A7%C3%A3o%20Arnia/Modulo%201/Projeto-Modulo1/pages/medical-record/index.html?userId=${userId}`;
+  window.location.href = `C:/Users/DELL/Desktop/Programa%C3%A7%C3%A3o%20Arnia/Modulo%201/Projeto-Modulo1/pages/medical-record/index.html?userId=${userId}&id=${patientId}`;
 }
 
 async function userName(id){
@@ -29,5 +30,6 @@ async function searchData(id){
     document.getElementById('sessionPrice').innerHTML = medicalRecord.sessionPrice;
     document.getElementById('paymentForm').innerHTML = medicalRecord.formOfPayment;
     document.getElementById('paymentStatus').innerHTML = medicalRecord.status;
+    patientId = medicalRecord.patientId
 }
 searchData(medicalRecordId)

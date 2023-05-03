@@ -139,6 +139,7 @@ async function patientsFilter() {
             class="buttoAction"
             src="assets/Images/medical-record.png"
             alt="Prontuario"
+            onclick="window.location.href = 'C:/Users/DELL/Desktop/Programa%C3%A7%C3%A3o%20Arnia/Modulo%201/Projeto-Modulo1/pages/medical-record/index.html?id=${patient.id}&userId=${userId}'"
           />
           <img
             class="buttoAction"
